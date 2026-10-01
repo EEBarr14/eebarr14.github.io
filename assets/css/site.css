@@ -1,0 +1,364 @@
+:root {
+  color-scheme: light;
+  --page: #f5f7f3;
+  --surface: #ffffff;
+  --ink: #173c34;
+  --body: #243a36;
+  --muted: #4a625b;
+  --line: #cfdbd4;
+  --accent: #155b76;
+  --accent-strong: #0d4961;
+  --focus: #b45424;
+  --soft-green: #e6eee8;
+  --header: rgb(245 247 243 / 94%);
+  --shadow: 0 1rem 3rem rgb(17 45 38 / 8%);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--page);
+  color: var(--body);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+body:has(#theme-toggle:checked) {
+  color-scheme: dark;
+  --page: #13221e;
+  --surface: #1b2d27;
+  --ink: #e4eee8;
+  --body: #e1eae5;
+  --muted: #b6c8bf;
+  --line: #3a5147;
+  --accent: #a4d4e6;
+  --accent-strong: #c8e6f0;
+  --focus: #f5bb8b;
+  --soft-green: #223a31;
+  --header: rgb(19 34 30 / 95%);
+  --shadow: 0 1rem 3rem rgb(0 0 0 / 22%);
+}
+
+a {
+  color: var(--accent-strong);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.14em;
+}
+
+a:focus-visible,
+input:focus-visible,
+label:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 10;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.7rem 1rem;
+  transform: translateY(-160%);
+  border-radius: 0.35rem;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid var(--line);
+  background: var(--header);
+}
+
+.header-inner,
+.footer-inner {
+  display: flex;
+  width: min(100% - 3rem, 68rem);
+  margin-inline: auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.header-inner {
+  min-height: 5.25rem;
+  flex-wrap: wrap;
+  padding-block: 0.9rem;
+}
+
+.site-name {
+  flex: 0 0 auto;
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  text-decoration: none;
+}
+
+.site-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1.25rem;
+  list-style: none;
+}
+
+.site-nav a {
+  display: inline-block;
+  padding-block: 0.4rem;
+  color: var(--body);
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.42em;
+}
+
+.theme-control {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.theme-control input {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  accent-color: var(--accent);
+}
+
+.theme-control label {
+  cursor: pointer;
+}
+
+.page-shell {
+  width: min(100% - 3rem, 48rem);
+  min-height: calc(100vh - 10rem);
+  margin-inline: auto;
+  padding-block: clamp(3rem, 7vw, 5.5rem) 5rem;
+}
+
+.page-heading {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 0.65rem;
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.35rem, 8vw, 4rem);
+  font-weight: 720;
+  letter-spacing: -0.055em;
+}
+
+h2 {
+  margin: 2.8rem 0 0.85rem;
+  font-size: clamp(1.35rem, 4vw, 1.75rem);
+  letter-spacing: -0.035em;
+}
+
+h3 {
+  margin: 1.8rem 0 0.3rem;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0 0 1.1rem;
+}
+
+.page-subtitle {
+  max-width: 39rem;
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: 1.12rem;
+}
+
+.home-intro {
+  max-width: 43rem;
+}
+
+.home-intro h1 {
+  font-size: clamp(3rem, 10vw, 5rem);
+}
+
+.home-lede {
+  max-width: 38rem;
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1.1rem, 3vw, 1.32rem);
+  line-height: 1.6;
+}
+
+.mountain-art {
+  overflow: hidden;
+  margin: 2.6rem 0 3rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--soft-green);
+  box-shadow: var(--shadow);
+}
+
+.mountain-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.page-shell--home {
+  padding-top: clamp(3rem, 8vw, 6.5rem);
+}
+
+.page-shell--home h2 {
+  margin-top: 2.2rem;
+}
+
+.page-shell ul {
+  padding-left: 1.35rem;
+}
+
+.page-shell li {
+  padding-left: 0.2rem;
+}
+
+.page-shell li + li {
+  margin-top: 0.35rem;
+}
+
+.page-shell h2 + p {
+  margin-top: 0;
+}
+
+.page-actions {
+  display: flex;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.8rem;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 700;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer-inner {
+  min-height: 4.75rem;
+  flex-wrap: wrap;
+  padding-block: 0.8rem;
+}
+
+.footer-inner p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .header-inner,
+  .footer-inner {
+    width: min(100% - 2rem, 48rem);
+  }
+
+  .header-inner {
+    justify-content: flex-start;
+    gap: 0.45rem 1rem;
+  }
+
+  .site-nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .site-nav ul {
+    justify-content: flex-start;
+    gap: 0.2rem 1rem;
+  }
+
+  .site-nav a {
+    font-size: 0.88rem;
+  }
+
+  .theme-control {
+    margin-left: auto;
+  }
+
+  .page-shell {
+    width: min(100% - 2rem, 48rem);
+  }
+
+  .page-shell--home {
+    padding-top: 3rem;
+  }
+
+  .mountain-art {
+    margin-block: 2rem 2.5rem;
+    border-radius: 0.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
