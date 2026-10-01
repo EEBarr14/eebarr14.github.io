@@ -1,0 +1,36 @@
+title: Erin Barrett
+description: Personal portfolio for Erin Barrett, MBA candidate and former U.S. Navy Judge Advocate.
+url: "https://eebarr14.github.io"
+baseurl: ""
+lang: en
+timezone: America/Los_Angeles
+markdown: kramdown
+permalink: pretty
+theme: null
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - PLAN.md
+  - replit.md
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - .replit
+  - .replitignore
+  - .npmrc
+  - package.json
+  - pnpm-lock.yaml
+  - pnpm-workspace.yaml
+  - tsconfig.json
+  - tsconfig.base.json
+  - _site/
+  - artifacts/
+  - lib/
+  - scripts/
+  - node_modules/
+  - .local/
+  - .agents/
