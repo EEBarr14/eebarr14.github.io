@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+  <title id="title">Quiet mountain ridges</title>
+  <desc id="desc">Layered green and blue mountain silhouettes beneath a soft morning sky.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dce9e9"/>
+      <stop offset="1" stop-color="#f0f3ec"/>
+    </linearGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#92b4b3"/>
+      <stop offset="1" stop-color="#789c9b"/>
+    </linearGradient>
+    <linearGradient id="near" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5f8475"/>
+      <stop offset="1" stop-color="#456b61"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="380" fill="url(#sky)"/>
+  <circle cx="935" cy="93" r="35" fill="#e5d9b9" opacity=".68"/>
+  <path d="M0 255 126 148l72 66 146-135 155 176 136-112 105 89 145-138 160 163 104-90 151 132v91H0Z" fill="url(#far)"/>
+  <path d="m0 291 128-90 111 83 135-104 146 106 122-68 136 81 109-84 137 96 101-66 175 112v23H0Z" fill="#78968c" opacity=".84"/>
+  <path d="m0 324 173-92 137 86 134-82 116 68 166-91 136 91 126-56 122 64 90-35v103H0Z" fill="url(#near)"/>
+  <path d="m268 180 76-101 71 81-37-16-20 17-19-21-20 28-19-13Z" fill="#eaf0e8" opacity=".88"/>
+  <path d="m624 198 115-109 99 92-52-20-23 20-24-23-27 34-27-15Z" fill="#eaf0e8" opacity=".72"/>
+  <path d="m980 187 78-74 70 70-32-14-18 14-19-17-21 25-19-12Z" fill="#eaf0e8" opacity=".7"/>
+</svg>
