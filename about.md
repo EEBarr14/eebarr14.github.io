@@ -26,6 +26,18 @@ William & Mary Law Review, Editorial Board, Notes Editor; Moot Court Competition
 - Debate coach for incarcerated people in Washington, D.C. (2024–2025)
 - Lieutenant in the United States Navy Selected Reserve (2025–present)
 
-## Outside work
-
-I enjoy hiking in the National Parks, baking my signature sprinkle sugar cookies, and attempting to play golf.
+<section class="about-outside-work" aria-labelledby="outside-work-heading">
+  <div class="about-outside-work__copy">
+    <h2 id="outside-work-heading">Outside work</h2>
+    <p>I enjoy hiking in the National Parks, baking my signature sprinkle sugar cookies, and attempting to play golf.</p>
+  </div>
+  <img
+    class="about-outside-work__photo"
+    src="{{ '/assets/images/erin-barrett-hiking.jpg' | relative_url }}"
+    alt="Erin hiking a rocky trail beneath a lush forest canopy"
+    width="1350"
+    height="1800"
+    loading="lazy"
+    decoding="async"
+  >
+</section>

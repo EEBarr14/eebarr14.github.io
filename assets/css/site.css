@@ -284,6 +284,27 @@ p {
   margin-top: 0;
 }
 
+.about-outside-work {
+  display: grid;
+  margin-top: 2.8rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 14rem);
+  align-items: start;
+  gap: 2rem;
+}
+
+.about-outside-work__copy h2 {
+  margin: 0 0 0.85rem;
+}
+
+.about-outside-work__photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  box-shadow: var(--shadow);
+}
+
 .page-actions {
   display: flex;
   margin-top: 2rem;
@@ -345,6 +366,11 @@ p {
 
   .page-shell {
     width: min(100% - 2rem, 48rem);
+  }
+
+  .about-outside-work {
+    grid-template-columns: minmax(0, 1fr) minmax(7rem, 38%);
+    gap: 1rem;
   }
 
   .page-shell--home {
