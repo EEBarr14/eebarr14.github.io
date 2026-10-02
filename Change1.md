@@ -44,4 +44,17 @@ published: false
 
 Ask for confirmation before editing the Contact page, running the build and Preview checks, committing, pushing, and opening the pull request.
 
-This file documents the plan only; the Contact page has not yet been changed or verified.
+## Completed edit and verification
+
+- Removed the Contact subtitle and all previous body text.
+- Replaced the body with the single approved LinkedIn link:
+  `[LinkedIn](https://www.linkedin.com/in/erin-barrett2)`.
+- Retained the Contact heading, navigation, layout, and remaining page metadata.
+- Built the Jekyll site successfully.
+- Checked `/contact/` in Replit Preview at desktop and mobile sizes.
+- Confirmed the removed text no longer appears and the link has the exact approved HTTPS destination.
+- Confirmed no email address was added and no information was fetched from LinkedIn.
+- Confirmed this document is not included in the generated website.
+- Reviewed the changes against GitHub's `main`: only `contact.md` and `Change1.md` are included.
+
+The edit and verification are complete. Pushing the branch, opening the pull request, and merging still require separate approval.
